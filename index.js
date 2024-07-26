@@ -8,9 +8,7 @@ const app = express()
 app.use(express.json())
 app.use(express.static("dist"))
 app.use(cors({
-    origin: process.env.NODE_ENV === "production"
-        ? "http://localhost:5173"
-        : process.env.LIVE_SERVER,
+    origin: true,
     credentials: true
 
 }))

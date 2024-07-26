@@ -172,7 +172,16 @@ exports.loginUser = asyncHandler(async (req, res) => {
     })
 
 
-    res.json({ message: "User Rgister Success" })
+    res.json({
+        message: "User Rgister Success", result: {
+            _id: result._id,
+            name: result.name,
+            email: result.email,
+            mobile: result.mobile,
+            avatar: result.avatar,
+            verified: result.verified,
+        }
+    })
 
 })
 
